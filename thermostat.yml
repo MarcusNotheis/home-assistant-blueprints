@@ -1,6 +1,7 @@
 blueprint:
   name: Thermostat
   domain: automation
+  source_url: https://github.com/MarcusNotheis/home-assistant-blueprints/blob/main/thermostat.yml
   input:
     thermostat:
       name: Thermostat
