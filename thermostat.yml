@@ -7,8 +7,9 @@ blueprint:
       name: Thermostat
       multiple: true
       selector:
-        entity:
-          domain: climate
+        target:
+          entity:
+            domain: climate
 
     schedule:
       name: Schedule
