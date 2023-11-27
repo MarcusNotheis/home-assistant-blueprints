@@ -19,6 +19,7 @@ blueprint:
       selector:
         entity:
           domain: binary_sensor
+          device_class: window
 
 trigger:
   - platform: state
