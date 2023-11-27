@@ -5,9 +5,10 @@ blueprint:
   input:
     thermostat:
       name: Thermostat
+      multiple: true
       selector:
-        target:
-          device:
+        entity:
+          domain: climate
 
     schedule:
       name: Schedule
@@ -17,6 +18,7 @@ blueprint:
 
     window_contacts:
       name: Window Contact(s)
+      multiple: true
       selector:
         entity:
           domain: binary_sensor
