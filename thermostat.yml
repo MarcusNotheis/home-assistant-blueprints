@@ -1,0 +1,38 @@
+blueprint:
+  name: Thermostat
+  domain: automation
+  input:
+    thermostat:
+      name: Thermostat
+      selector:
+        target:
+          device:
+
+    schedule:
+      name: Schedule
+      selector:
+        entity:
+          domain: schedule
+
+    window_contacts:
+      name: Window Contact(s)
+      selector:
+        entity:
+          domain: binary_sensor
+
+trigger:
+  - platform: state
+    entity_id: !input schedule
+    from: "on"
+    to: "off"
+  - platform: state
+    entity_id: !input schedule
+    from: "off"
+    to: "on"
+
+condition:
+  - condition: state
+    entity_id: sensor.anwesenheit
+    state: Anwesend
+
+action:
